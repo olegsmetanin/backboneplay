@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /		controllers.Assets.at(path="/public", file="/index.html")
+GET     /index-production	controllers.Assets.at(path="/public", file="/index-production.html")
+
+
+GET     /todos		controllers.Todos.list
+POST    /todos		controllers.Todos.add
+PUT     /todos/:id	controllers.Todos.update(id:String)
+DELETE  /todos/:id	controllers.Todos.delete(id:String)
+
+# Map static resources from the /public folder
+GET     /images/*file	controllers.Assets.at(path="/public/images", file)
+GET     /stylesheets/*file	controllers.Assets.at(path="/public/stylesheets", file)
+GET     /javascripts/*file	controllers.Assets.at(path="/public/javascripts", file)
+
+
+
+
+
+
+
